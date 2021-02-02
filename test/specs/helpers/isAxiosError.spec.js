@@ -17,4 +17,9 @@ describe('helpers::isAxiosError', function () {
     expect(isAxiosError(new Error('Boom!')))
       .toBe(false);
   });
+
+  it('should return false if null is specified', function () {
+    expect(isAxiosError(null))
+      .toBe(false);
+  });
 });
